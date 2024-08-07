@@ -1,0 +1,79 @@
+/***********************`
+       FOOTER
+***********************/
+
+footer {
+  position: absolute !important;
+  bottom: 30px;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+footer div:first-child {
+  font-size: 12px;
+}
+
+footer ul {
+  padding-left: 0px;
+}
+
+footer li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+footer li a {
+  transition: 0.3s all;
+}
+
+footer li a:hover {
+  padding-left: 15px;
+}
+
+footer li a:before {
+  content: "\e902";
+  font-family: "lumia" !important;
+  margin-left: -17px;
+  margin-right: 5px;
+  transition: 0.2s all;
+  font-size: 12px;
+  opacity: 0;
+  color: var(--color--grey);
+}
+
+footer li a:hover::before {
+  opacity: 1;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
+
+.social a {
+  margin-right: 10px;
+}
+
+.social a:hover {
+  padding: 0px;
+}
+
+.social a img {
+  transition: 0.1s all;
+}
+
+.social a:hover img {
+  transform: scale(0.8);
+}
+
+.social a::before {
+  display: none;
+}
+
+footer h5 {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: var(--color--grey);
+  margin-top: 0px;
+}

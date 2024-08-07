@@ -1,0 +1,129 @@
+/* ==========================================================================
+   User Interface
+   ========================================================================== */
+
+/* Glow Button */
+
+.btn {
+  position: relative;
+  appearance: none;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 25px 30px;
+  color: var(--color-white);
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 12px;
+  min-width: 160px;
+  justify-content: center;
+}
+
+.btn-default {
+  border: 1px solid var(--color-primary);
+}
+
+.btn-default:hover {
+  border: 1px solid var(--color-white);
+  filter: drop-shadow(0px 0px 6px #3f67b8);
+}
+
+.btn::after {
+  content: "\e902";
+  font-family: "lumia" !important;
+  display: flex;
+  margin-left: 5px;
+  transition: 0.2s all;
+  font-size: 12px;
+}
+
+.btn:hover::after {
+  margin-left: 15px;
+}
+
+/* Form Inputs */
+
+input,
+textarea {
+  border: none;
+  padding: 15px 20px;
+  background: var(--color-white);
+  color: var(--color-primary);
+  font-size: 14px;
+  font-family: var(--font-text);
+  outline: none;
+  box-sizing: border-box;
+  border-left: none;
+  border-right: none;
+}
+
+textarea {
+  height: 150px;
+  width: 100%;
+}
+
+/* Error Messages */
+
+.message-error {
+  color: var(--color-messageError);
+}
+
+.message-success {
+  color: var(--color-messageSuccess);
+}
+
+form .field.field-error {
+  border-color: var(--color-fieldError);
+}
+
+form.form-loading button .icon {
+  display: inline-block;
+}
+
+form.form-loading button .text {
+  display: none;
+}
+
+/* Mouse Down Icon*/
+
+.scroll--mouse {
+  display: block;
+  width: 3px;
+  padding: 10px 15px;
+  height: 30px;
+  border-radius: 25px;
+  opacity: 1;
+  box-sizing: content-box;
+  background: var(--color-white);
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  z-index: 2;
+}
+
+.scroll--mouse::after {
+  content: "";
+  width: 3px;
+  height: 10px;
+  display: block;
+  border-radius: 25%;
+  background-color: var(--color-primary);
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+  0% {
+    top: 10px;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+    transform: translateY(26px);
+  }
+}
